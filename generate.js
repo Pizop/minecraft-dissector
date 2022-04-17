@@ -217,10 +217,7 @@ ${indent(
   col_set_str(pinfo->cinfo, COL_INFO, "${unsnake(name)} [${namespace[0]}] (${namespace[1]})");
   break;`
         }
-        const { code } = read(names_to_types[name], undefined, {
-          path: `${path}_${name}`,
-          read,
-        })
+        
         return `case ${id}:
   col_set_str(pinfo->cinfo, COL_INFO, "${unsnake(name)} [${namespace[0]}] (${namespace[1]})");
 ${indent(code)}
