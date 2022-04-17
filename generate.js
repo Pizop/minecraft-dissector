@@ -190,7 +190,7 @@ function generate(namespace, skip = []) {
       return read(fieldInfo, args, ctx)
     } else if (Array.isArray(fieldInfo)) {
       return read(fieldInfo[0], fieldInfo[1], ctx)
-    } else throw new Error("Invalid type " + type)
+    } else 
   }
 
   const { packet } = types
