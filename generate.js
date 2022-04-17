@@ -177,7 +177,7 @@ function generate(namespace, skip = []) {
   function read(type, args, ctx = {}) {
     let fieldInfo
     if (typeof type === "string") {
-      if (!(type in types)) throw new Error("unknown type " + type)
+      if (!(type in types))
 
       fieldInfo = types[type]
     } else fieldInfo = type
