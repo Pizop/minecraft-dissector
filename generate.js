@@ -186,9 +186,7 @@ function generate(namespace, skip = []) {
       return fieldInfo(args, ctx)
     }
     if (typeof fieldInfo === "string") {
-      if (fieldInfo === "native") {
-        throw new Error("unknown native " + type)
-      }
+     
       return read(fieldInfo, args, ctx)
     } else if (Array.isArray(fieldInfo)) {
       return read(fieldInfo[0], fieldInfo[1], ctx)
